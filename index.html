@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIONARCTECH | Advanced Research Center of Technology</title>
+     <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <!-- BACKGROUND ANIMATION CANVAS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">🌐ZIONARC<span>TECH</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#divisions">Research</a></li>
+                <li><a href="#media">YouTube</a></li>
+                <li ><a href="#footer" class="ctn">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- SERVICES / CLIENT SOLUTIONS SECTION (MOVED TO TOP) -->
+    <section id="services">
+        <h2 class="section-title">Digital Product & Software Solutions</h2>
+        <p class="section-subtitle">Transforming vision into scalable digital products. We engineer high-performance Web Platforms, Custom Mobile Applications, and Enterprise Architectures.</p>
+
+        <div class="services-grid">
+            <!-- WEB DEVELOPMENT CARD -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">☁️</div>
+                    <h3>Custom Web Engineering</h3>
+                    <p>Modern, responsive, and secure web solutions tailored for startups and enterprise clients. Built for speed, accessibility, and high search engine ranking.</p>
+                    <ul class="service-features">
+                        <li>SaaS & Enterprise Portals</li>
+                        <li>Progressive Web Apps (PWAs)</li>
+                        <li>Custom E-Commerce Platforms</li>
+                        <li>Interactive Dashboards & UI/UX</li>
+                    </ul>
+                </div>
+                <a href="#footer" class="service-btn">Request Web Solution</a>
+            </div>
+
+            <!-- MOBILE APP DEVELOPMENT CARD -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Cross-platform and native iOS & Android applications tailored for sleek user experiences, offline capability, and seamless performance.</p>
+                    <ul class="service-features">
+                        <li>iOS & Android Native Apps</li>
+                        <li>Cross-Platform Frameworks</li>
+                        <li>Real-Time Sync & Notifications</li>
+                        <li>App Store Deployment & Management</li>
+                    </ul>
+                </div>
+                <a href="#footer" class="service-btn">Request Mobile App</a>
+            </div>
+
+            <!-- CLOUD & BACKEND CARD -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">⚡</div>
+                    <h3>APIs & Cloud Infrastructure</h3>
+                    <p>Scalable cloud architectures, microservices, and custom APIs built to back high-traffic web platforms and compute-heavy mobile applications.</p>
+                    <ul class="service-features">
+                        <li>Custom REST & GraphQL APIs</li>
+                        <li>Cloud Hosting & Microservices</li>
+                        <li>Database Optimization & Security</li>
+                        <li>AI & ML API Integrations</li>
+                    </ul>
+                </div>
+                <a href="#footer" class="service-btn">Request Backend Architecture</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="hero">
+        <h1>Engineering the Frontiers<br>of Human Capability</h1>
+        <p>ZIONARCTECH bridges fundamental physics, intelligent cognitive architectures, and advanced engineering systems to engineer the future of technological breakthrough.</p>
+        <div class="btn-group">
+            <a href="#services" class="btn btn-primary">Build With Us</a>
+            <a href="#divisions" class="btn btn-secondary">Explore Research</a>
+        </div>
+    </section>
+
+   
+
+    <!-- DIVISIONS SECTION -->
+    <section id="divisions">
+        <h2 class="section-title">Research Divisions</h2>
+        <p class="section-subtitle">Seven core domains defining next-generation discovery.</p>
+        
+        <div class="division-nav" id="division-tabs"></div>
+        <div class="division-display" id="division-content"></div>
+    </section>
+     <!-- ABOUT SECTION -->
+    <section >
+        <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; border-radius: 8px;">
+                
+            <p>ZIONARCTECH | The Advanced Research Center of Technology is an interdisciplinary startup dedicated to solving critical global challenges, Operate as the intersection of deep theory and physical reality by integrating super intelligence, quantum phenomena, robotic systems, Mechanical designs, flight dynamics, and atomic materials science under one ecosystem on the objective of transitioning blue-sky research into real-world applications.</p>
+        </div>
+    </section>
+
+    <!-- YOUTUBE MEDIA SECTION -->
+    <section id="media">
+        <div class="channel-header">
+            <div class="channel-info">
+                <!-- CLICKABLE PLAY BUTTON THAT LAUNCHES MODAL -->
+                <button class="channel-avatar-btn" onclick="openModal('G_ZTedL7IKc')" title="Click to play featured video">▶</button>
+                <div>
+                    <h3 style="color: #fff; font-size: 1.4rem;">ARCTECH Official Channel</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">@ArctechWorld • Global Tech Demonstrations & Webinars</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://www.youtube.com/@ArctechWorld" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #ff0000; color: #fff;">
+                    Subscribe on YouTube
+                </a>
+                <a href="https://www.instagram.com/arctechworld" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); color: #fff;">
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
+
+        <div class="video-grid" id="video-grid"></div>
+    </section>
+
+    <!-- EMBEDDED YOUTUBE VIDEO PLAYER MODAL -->
+    <div class="modal" id="video-modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-player-container" style="width: 100%; height: 100%;"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER WITH INTEGRATED LINKS -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">ZIONARC<span>TECH</span></a>
+                <p style="margin-top: 0.5rem; color: var(--text-muted);">Advanced Research Center of Technology</p>
+            </div>
+
+            <div class="footer-links-grid">
+                
+                <a href="mailto:contact@arctech-research.org" class="footer-link-item">
+                    <span  style="font-size: 1.2rem;color: #06b6d4;">Contact Us : ✉</span> arctechworld@gmail.com
+                </a>
+                <!-- YOUTUBE LINK -->
+                <a href="https://www.youtube.com/@ArctechWorld" target="_blank" rel="noopener noreferrer" class="footer-link-item yt">
+                    <span style="font-size: 1.2rem;color: red;">▶</span> YouTube: @ArctechWorld
+                </a>
+
+                <!-- INSTAGRAM LINK -->
+                <a href="https://www.instagram.com/arctechworld" target="_blank" rel="noopener noreferrer" class="footer-link-item insta">
+                    <span style="width: 32px; height: 32px; border: 2px solid orangered; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: orangered;">▶</span> Instagram: @arctechworld
+                </a>
+
+              
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 All Rights Reserved. ZIONARCTECH | Advanced Research Center of Technology. </p>
+            </div>
+        </div>
+    </footer>
+
+  
+     <script src="script.js"></script>
+</body>
+</html>
